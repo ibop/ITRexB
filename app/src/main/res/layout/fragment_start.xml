@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vSTartScreenLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@drawable/start_background">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/vTiStartLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:hint="@string/ticker_symbols"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColorHint="@color/white_grey"
+        app:errorTextAppearance="@style/MyErrorText"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:maxLines="3"
+            android:maxLength="100"
+            android:imeOptions="actionSearch"
+            android:theme="@style/MyEditText"
+            android:backgroundTint="@color/white" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/vBtnStartNext"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/next"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_background_round_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vTiStartLayout" />
+
+    <TextView
+        android:id="@+id/vTvSymbolsHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eg_lc"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="@+id/vTiStartLayout"
+        app:layout_constraintTop_toBottomOf="@+id/vTiStartLayout" />
+
+    <TextView
+        android:id="@+id/vTvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
